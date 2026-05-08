@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Malay Yến — Yến Malaysia chuẩn AVS, giá thân thiện</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,30..100;1,9..144,300..900,30..100&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#f4ede0;
+    --cream:#ebe1cc;
+    --paper:#e8dcc1;
+    --ink:#1c2a23;
+    --jade:#2c4a3e;
+    --jade-deep:#1a302a;
+    --sienna:#a8492a;
+    --rust:#8b3818;
+    --gold:#b08642;
+    --gold-soft:#c69e5a;
+    --line:rgba(28,42,35,.18);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Be Vietnam Pro',sans-serif;
+    background:var(--ivory);
+    color:var(--ink);
+    font-weight:400;
+    line-height:1.55;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    z-index:100;
+    opacity:.35;
+    mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.6 0 0 0 0 0.5 0 0 0 0 0.35 0 0 0 0.25 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .display{font-family:'Fraunces',serif;font-optical-sizing:auto;}
+  .label{
+    font-family:'Be Vietnam Pro',sans-serif;
+    font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;
+  }
+  .num{font-family:'Fraunces',serif;font-style:italic;font-weight:300;}
+
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    padding:22px 48px;
+    display:flex;align-items:center;justify-content:space-between;
+    background:linear-gradient(to bottom, rgba(244,237,224,.95), rgba(244,237,224,0));
+    backdrop-filter:blur(6px);
+  }
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{
+    width:40px;height:40px;border:1px solid var(--ink);border-radius:50%;
+    display:grid;place-items:center;
+    font-family:'Fraunces',serif;font-style:italic;font-size:22px;
+    background:var(--ivory);
+  }
+  .brand-name{font-family:'Fraunces',serif;font-size:22px;font-weight:400;letter-spacing:.02em;}
+  .brand-name em{font-style:italic;color:var(--jade);font-weight:300;}
+  nav ul{display:flex;gap:38px;list-style:none}
+  nav a{
+    color:var(--ink);text-decoration:none;
+    font-size:13px;letter-spacing:.04em;
+    position:relative;padding-bottom:3px;
+  }
+  nav a::after{
+    content:"";position:absolute;left:0;bottom:0;width:0;height:1px;
+    background:var(--jade);transition:width .4s ease;
+  }
+  nav a:hover::after{width:100%}
+  .nav-cta{
+    border:1px solid var(--ink);
+    padding:11px 22px;border-radius:999px;
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    transition:all .3s ease;
+    background:transparent;cursor:pointer;
+    font-family:inherit;color:var(--ink);
+  }
+  .nav-cta:hover{background:var(--ink);color:var(--ivory);}
+
+  .hero{
+    min-height:100vh;
+    padding:140px 48px 80px;
+    position:relative;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+  }
+  .hero-meta{
+    position:absolute;top:140px;right:48px;
+    text-align:right;
+  }
+  .hero-meta .label{color:var(--jade);}
+  .hero-meta .coords{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:300;
+    color:var(--ink);opacity:.7;font-size:13px;margin-top:6px;
+  }
+
+  .hero h1{
+    font-family:'Fraunces',serif;
+    font-size:clamp(56px,9vw,148px);
+    font-weight:300;
+    line-height:.94;
+    letter-spacing:-.025em;
+    color:var(--ink);
+  }
+  .hero h1 em{
+    font-style:italic;font-weight:300;color:var(--jade);
+  }
+  .hero h1 .accent{
+    font-style:italic;font-weight:300;color:var(--sienna);
+    font-variation-settings:"SOFT" 100;
+  }
+
+  .hero-sub{
+    margin-top:40px;
+    max-width:480px;
+    font-size:16px;line-height:1.7;color:var(--ink);opacity:.82;
+  }
+  .hero-actions{
+    margin-top:40px;display:flex;gap:18px;align-items:center;
+  }
+  .btn-primary{
+    background:var(--ink);color:var(--ivory);
+    padding:16px 32px;border-radius:999px;
+    font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+    border:none;cursor:pointer;font-family:inherit;
+    transition:all .3s ease;
+  }
+  .btn-primary:hover{background:var(--jade);transform:translateY(-1px);}
+  .btn-ghost{
+    background:transparent;border:none;cursor:pointer;
+    font-family:'Fraunces',serif;font-style:italic;font-size:17px;
+    color:var(--ink);padding:6px 0;
+    border-bottom:1px solid var(--line);
+    transition:all .3s ease;
+  }
+  .btn-ghost:hover{border-bottom-color:var(--ink);padding-left:8px;}
+
+  .hero-visual{
+    position:relative;
+    aspect-ratio:1/1;
+    max-width:560px;
+    justify-self:end;
+    width:100%;
+  }
+  .nest-circle{
+    position:absolute;inset:0;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #e8dcc1 0%, #d4bf95 55%, #b89f6e 100%);
+    box-shadow:
+      inset 0 -20px 60px rgba(80,55,30,.35),
+      inset 0 20px 50px rgba(255,245,220,.45),
+      0 30px 80px -30px rgba(60,40,20,.45);
+  }
+  .nest-fibers{
+    position:absolute;inset:0;border-radius:50%;
+    background-image:
+      repeating-conic-gradient(from 0deg at 50% 50%,
+        transparent 0deg, rgba(120,85,40,.07) 1deg, transparent 2deg),
+      repeating-radial-gradient(circle at 50% 50%,
+        transparent 0, transparent 4px, rgba(140,100,55,.08) 5px, transparent 6px);
+    mix-blend-mode:multiply;
+  }
+  .nest-shine{
+    position:absolute;top:8%;left:18%;width:42%;height:30%;
+    background:radial-gradient(ellipse, rgba(255,250,235,.55) 0%, transparent 60%);
+    border-radius:50%;
+    filter:blur(8px);
+  }
+  .float-tag{
+    position:absolute;
+    background:var(--ivory);
+    border:1px solid var(--line);
+    padding:14px 18px;
+    border-radius:4px;
+    font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    box-shadow:0 12px 30px -12px rgba(28,42,35,.2);
+    display:flex;align-items:center;gap:10px;
+  }
+  .float-tag .dot{
+    width:6px;height:6px;border-radius:50%;background:var(--jade);
+  }
+  .float-tag.t1{top:8%;left:-8%;animation:float 6s ease-in-out infinite;}
+  .float-tag.t2{bottom:14%;right:-6%;animation:float 7s ease-in-out infinite -2s;}
+  .float-tag.t3{
+    bottom:-2%;left:8%;
+    background:var(--jade);color:var(--ivory);border:none;
+    animation:float 5.5s ease-in-out infinite -3s;
+  }
+  .float-tag.t3 .dot{background:var(--gold-soft);}
+  @keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+  }
+
+  .scroll-cue{
+    position:absolute;bottom:40px;left:48px;
+    display:flex;align-items:center;gap:14px;
+    font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--ink);opacity:.6;
+  }
+  .scroll-cue::before{
+    content:"";width:60px;height:1px;background:var(--ink);
+    animation:line 2s ease-in-out infinite;
+    transform-origin:left;
+  }
+  @keyframes line{
+    0%,100%{transform:scaleX(.4)}50%{transform:scaleX(1)}
+  }
+
+  .marquee{
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:22px 0;
+    overflow:hidden;
+    background:var(--cream);
+    position:relative;
+  }
+  .marquee-track{
+    display:flex;gap:60px;
+    animation:scroll 35s linear infinite;
+    white-space:nowrap;
+    width:max-content;
+  }
+  .marquee span{
+    font-family:'Fraunces',serif;
+    font-size:32px;
+    font-style:italic;
+    font-weight:300;
+    color:var(--ink);
+    display:flex;align-items:center;gap:60px;
+  }
+  .marquee span::after{
+    content:"✣";color:var(--gold);font-style:normal;font-size:18px;
+  }
+  @keyframes scroll{
+    to{transform:translateX(-50%)}
+  }
+
+  .story{
+    padding:140px 48px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:start;
+    position:relative;
+  }
+  .story-eyebrow{color:var(--sienna);}
+  .story h2{
+    font-family:'Fraunces',serif;
+    font-size:clamp(40px,5vw,76px);
+    font-weight:300;
+    line-height:1.02;
+    letter-spacing:-.01em;
+    margin-top:24px;
+    max-width:520px;
+  }
+  .story h2 em{font-style:italic;color:var(--jade);font-weight:300;}
+  .story-right p{
+    font-size:16px;line-height:1.8;color:var(--ink);opacity:.85;
+    margin-bottom:24px;
+  }
+  .story-right p::first-letter{
+    font-family:'Fraunces',serif;
+    font-size:64px;
+    float:left;
+    line-height:.85;
+    margin:6px 12px 0 0;
+    color:var(--jade);
+    font-weight:300;
+  }
+  .story-stats{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    padding-top:40px;
+    border-top:1px solid var(--line);
+  }
+  .stat .num-big{
+    font-family:'Fraunces',serif;
+    font-size:56px;font-weight:300;line-height:1;
+    color:var(--ink);
+    letter-spacing:-.02em;
+  }
+  .stat .num-big sup{font-size:22px;color:var(--gold);font-style:italic;font-weight:300;top:-1.4em;left:.05em;}
+  .stat .stat-label{
+    margin-top:10px;font-size:12px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink);opacity:.7;
+  }
+
+  .products{
+    padding:120px 48px;
+    background:var(--paper);
+    position:relative;
+  }
+  .products-head{
+    display:flex;align-items:end;justify-content:space-between;
+    margin-bottom:80px;gap:40px;
+  }
+  .products h2{
+    font-family:'Fraunces',serif;
+    font-size:clamp(44px,6vw,92px);
+    font-weight:300;line-height:.95;letter-spacing:-.02em;
+  }
+  .products h2 em{font-style:italic;color:var(--rust);}
+  .products-head p{
+    max-width:380px;font-size:15px;line-height:1.7;opacity:.8;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .card{
+    background:var(--ivory);
+    padding:36px 32px 30px;
+    position:relative;
+    transition:background .4s ease;
+    cursor:pointer;
+  }
+  .card:hover{background:#fbf5e8;}
+  .card-num{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:300;
+    font-size:14px;color:var(--gold);
+    position:absolute;top:24px;right:28px;
+  }
+  .card-image{
+    width:100%;aspect-ratio:1/1;
+    border-radius:50%;
+    margin:8px auto 28px;
+    max-width:240px;
+    position:relative;
+    transition:transform .6s cubic-bezier(.2,.8,.2,1);
+  }
+  .card:hover .card-image{transform:scale(1.04) rotate(-2deg);}
+
+  .img-1{background:radial-gradient(circle at 35% 30%,#f0e3c9,#cfb582 60%,#9b7c44);
+    box-shadow:inset 0 -14px 40px rgba(80,55,30,.3),inset 0 12px 30px rgba(255,245,220,.4);}
+  .img-2{background:radial-gradient(circle at 35% 30%,#f6efd8,#dbc99a 60%,#a98e57);
+    box-shadow:inset 0 -14px 40px rgba(80,55,30,.25),inset 0 12px 30px rgba(255,245,220,.45);}
+  .img-3{background:radial-gradient(circle at 30% 30%,#fff5d8,#e8c773 55%,#a8721c);
+    box-shadow:inset 0 -14px 40px rgba(100,60,15,.4),inset 0 12px 30px rgba(255,245,210,.4);}
+
+  .card h3{
+    font-family:'Fraunces',serif;
+    font-size:30px;font-weight:300;
+    line-height:1.05;
+    letter-spacing:-.01em;
+    margin-bottom:6px;
+  }
+  .card h3 em{font-style:italic;color:var(--jade);}
+  .card-sub{
+    font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--ink);opacity:.6;margin-bottom:22px;
+  }
+  .card-desc{
+    font-size:14px;line-height:1.65;color:var(--ink);opacity:.78;
+    margin-bottom:28px;min-height:66px;
+  }
+  .card-foot{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:22px;border-top:1px dashed var(--line);
+  }
+  .card-price{
+    font-family:'Fraunces',serif;font-size:22px;font-weight:400;
+  }
+  .card-price small{font-size:12px;opacity:.6;font-weight:400;letter-spacing:.06em;}
+  .card-arrow{
+    width:36px;height:36px;border:1px solid var(--ink);
+    border-radius:50%;display:grid;place-items:center;
+    transition:all .3s ease;
+    font-size:16px;
+  }
+  .card:hover .card-arrow{
+    background:var(--ink);color:var(--ivory);transform:rotate(-45deg);
+  }
+
+  .benefits{
+    padding:140px 48px;
+    background:var(--jade-deep);
+    color:var(--ivory);
+    position:relative;
+    overflow:hidden;
+  }
+  .benefits::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(ellipse at top right, rgba(176,134,66,.18), transparent 50%);
+    pointer-events:none;
+  }
+  .benefits-head{
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;
+    margin-bottom:90px;align-items:end;
+  }
+  .benefits .label{color:var(--gold-soft);}
+  .benefits h2{
+    font-family:'Fraunces',serif;
+    font-size:clamp(48px,7vw,108px);
+    font-weight:300;line-height:.95;letter-spacing:-.02em;
+    margin-top:24px;
+  }
+  .benefits h2 em{font-style:italic;color:var(--gold-soft);}
+  .benefits-intro{
+    font-size:16px;line-height:1.75;opacity:.78;max-width:420px;
+  }
+
+  .benefit-list{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:0;
+    border-top:1px solid rgba(244,237,224,.15);
+  }
+  .benefit{
+    padding:50px 40px 50px 0;
+    border-bottom:1px solid rgba(244,237,224,.15);
+    display:grid;
+    grid-template-columns:80px 1fr;
+    gap:30px;
+    transition:padding .4s ease;
+    cursor:default;
+  }
+  .benefit:hover{padding-left:24px;background:rgba(244,237,224,.03);}
+  .benefit:nth-child(odd){padding-right:60px;border-right:1px solid rgba(244,237,224,.15);}
+  .benefit:nth-child(even){padding-left:60px;}
+  .benefit:hover:nth-child(even){padding-left:74px;}
+  .benefit-num{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:300;
+    font-size:48px;color:var(--gold-soft);line-height:1;opacity:.9;
+  }
+  .benefit h4{
+    font-family:'Fraunces',serif;
+    font-size:26px;font-weight:400;
+    margin-bottom:14px;letter-spacing:-.005em;
+  }
+  .benefit h4 em{font-style:italic;color:var(--gold-soft);font-weight:300;}
+  .benefit p{font-size:14px;line-height:1.7;opacity:.72;}
+
+  .testimony{
+    padding:140px 48px;
+    text-align:center;
+    position:relative;
+    background:var(--cream);
+  }
+  .quote-mark{
+    font-family:'Fraunces',serif;
+    font-style:italic;font-weight:300;
+    font-size:140px;line-height:.6;
+    color:var(--gold);opacity:.5;
+    margin-bottom:30px;
+  }
+  .testimony blockquote{
+    font-family:'Fraunces',serif;
+    font-size:clamp(28px,3.5vw,46px);
+    font-weight:300;line-height:1.25;
+    letter-spacing:-.01em;
+    max-width:920px;margin:0 auto 40px;
+  }
+  .testimony blockquote em{font-style:italic;color:var(--jade);}
+  .cite{
+    font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+    opacity:.7;
+  }
+  .cite strong{font-weight:500;color:var(--jade);}
+
+  .cta{
+    padding:120px 48px;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:80px;
+    align-items:center;
+    background:var(--ivory);
+    border-top:1px solid var(--line);
+  }
+  .cta h2{
+    font-family:'Fraunces',serif;
+    font-size:clamp(44px,6vw,86px);
+    font-weight:300;line-height:.98;letter-spacing:-.02em;
+  }
+  .cta h2 em{font-style:italic;color:var(--sienna);}
+  .cta-form{
+    display:flex;flex-direction:column;gap:16px;
+  }
+  .cta-form p{font-size:15px;opacity:.78;line-height:1.7;}
+  .input-row{
+    display:flex;gap:12px;
+    border-bottom:1px solid var(--ink);
+    padding-bottom:8px;
+  }
+  .input-row input{
+    flex:1;background:transparent;border:none;outline:none;
+    font-family:inherit;font-size:15px;padding:12px 0;color:var(--ink);
+  }
+  .input-row input::placeholder{color:var(--ink);opacity:.45;}
+  .input-row button{
+    background:var(--ink);color:var(--ivory);
+    border:none;padding:14px 26px;border-radius:999px;
+    font-family:inherit;font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    cursor:pointer;transition:all .3s ease;
+  }
+  .input-row button:hover{background:var(--jade);}
+
+  footer{
+    padding:60px 48px 30px;
+    background:var(--ink);color:var(--ivory);
+    display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;
+  }
+  footer h5{
+    font-family:'Be Vietnam Pro',sans-serif;
+    font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+    margin-bottom:18px;color:var(--gold-soft);font-weight:500;
+  }
+  footer ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  footer a{color:var(--ivory);text-decoration:none;font-size:14px;opacity:.72;transition:opacity .3s;}
+  footer a:hover{opacity:1;}
+  .foot-brand{
+    font-family:'Fraunces',serif;font-size:42px;font-weight:300;letter-spacing:-.01em;
+  }
+  .foot-brand em{font-style:italic;color:var(--gold-soft);}
+  .foot-tag{margin-top:14px;font-size:14px;opacity:.65;line-height:1.6;max-width:320px;}
+  .foot-bottom{
+    grid-column:1/-1;
+    margin-top:50px;padding-top:24px;
+    border-top:1px solid rgba(244,237,224,.15);
+    display:flex;justify-content:space-between;
+    font-size:12px;opacity:.5;letter-spacing:.06em;
+  }
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1);}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  .hero h1 .word{
+    display:inline-block;opacity:0;transform:translateY(40px);
+    animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards;
+  }
+  .hero h1 .word:nth-child(1){animation-delay:.1s;}
+  .hero h1 .word:nth-child(2){animation-delay:.22s;}
+  .hero h1 .word:nth-child(3){animation-delay:.34s;}
+  .hero h1 .word:nth-child(4){animation-delay:.46s;}
+  .hero h1 .word:nth-child(5){animation-delay:.58s;}
+  @keyframes rise{to{opacity:1;transform:translateY(0);}}
+
+  .hero-visual{opacity:0;animation:fadeIn 1.4s .5s ease forwards;}
+  @keyframes fadeIn{to{opacity:1}}
+
+  @media (max-width:960px){
+    nav ul{display:none;}
+    .hero{grid-template-columns:1fr;padding:120px 24px 60px;gap:40px;}
+    .hero-meta{display:none;}
+    .hero-visual{justify-self:center;max-width:380px;}
+    .story,.products,.benefits,.testimony,.cta{padding:80px 24px;}
+    .story{grid-template-columns:1fr;gap:40px;}
+    .grid{grid-template-columns:1fr;}
+    .benefits-head{grid-template-columns:1fr;gap:24px;}
+    .benefit-list{grid-template-columns:1fr;}
+    .benefit:nth-child(odd){padding-right:0;border-right:none;}
+    .benefit:nth-child(even){padding-left:0;}
+    .cta{grid-template-columns:1fr;gap:30px;}
+    footer{grid-template-columns:1fr 1fr;gap:40px;}
+    .scroll-cue{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">
+    <div class="brand-mark">m</div>
+    <div class="brand-name">Malay <em>Yến</em></div>
+  </div>
+  <ul>
+    <li><a href="#story">Câu chuyện</a></li>
+    <li><a href="#products">Sản phẩm</a></li>
+    <li><a href="#benefits">Công dụng</a></li>
+    <li><a href="#order">Đặt hàng</a></li>
+  </ul>
+  <button class="nav-cta">Liên hệ</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-meta">
+    <div class="label">Lô số 218 / 2026</div>
+    <div class="coords">Sarawak · Malaysia · 1°33′N</div>
+  </div>
+
+  <div>
+    <h1 class="display">
+      <span class="word">Yến</span>
+      <span class="word"><em>chuẩn</em></span>
+      <span class="word">Malaysia,</span>
+      <span class="word">giá</span>
+      <span class="word"><span class="accent">thân thiện</span>.</span>
+    </h1>
+    <p class="hero-sub reveal in">
+      Tổ yến nhập khẩu chính ngạch từ Sarawak — đạt chuẩn AVS quốc tế,
+      kiểm dịch nghiêm ngặt. Nhập trực tiếp không qua trung gian, vì vậy
+      giá chỉ bằng một phần ba yến đảo, mà dưỡng chất gần như tương đương.
+    </p>
+    <div class="hero-actions reveal in">
+      <button class="btn-primary">Khám phá sản phẩm</button>
+      <button class="btn-ghost">So sánh giá ↗</button>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="nest-circle"></div>
+    <div class="nest-fibers"></div>
+    <div class="nest-shine"></div>
+
+    <div class="float-tag t1"><span class="dot"></span>Chuẩn AVS Malaysia</div>
+    <div class="float-tag t2"><span class="dot"></span>Từ 590k / 100g</div>
+    <div class="float-tag t3"><span class="dot"></span>Nhập chính ngạch 2026</div>
+  </div>
+
+  <div class="scroll-cue">Cuộn xuống</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Yến Malaysia chính ngạch</span>
+    <span>Đạt chuẩn AVS quốc tế</span>
+    <span>Rẻ hơn 60% so với yến đảo</span>
+    <span>Không trung gian, không phụ phí</span>
+    <span>Giao toàn quốc 1–3 ngày</span>
+    <span>Yến Malaysia chính ngạch</span>
+    <span>Đạt chuẩn AVS quốc tế</span>
+    <span>Rẻ hơn 60% so với yến đảo</span>
+    <span>Không trung gian, không phụ phí</span>
+    <span>Giao toàn quốc 1–3 ngày</span>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="reveal">
+    <div class="label story-eyebrow">— Hành trình · từ Sarawak đến Sài Gòn</div>
+    <h2 class="display">
+      Đưa yến <em>chất lượng</em><br>về với mỗi gia đình<br>Việt Nam.
+    </h2>
+  </div>
+  <div class="story-right reveal">
+    <p>
+      Malay Yến ra đời từ một câu hỏi đơn giản: tại sao yến — vốn là dưỡng
+      chất quý — lại chỉ dành cho những dịp đặc biệt? Câu trả lời nằm ở
+      Malaysia, quốc gia đứng thứ hai thế giới về sản lượng yến sào với
+      hệ thống nhà nuôi quy hoạch và quy trình kiểm dịch AVS nghiêm ngặt.
+    </p>
+    <p>
+      Chúng tôi nhập trực tiếp từ Sarawak và Penang, cắt bỏ hoàn toàn
+      trung gian. Không bao bì xa hoa, không thương hiệu cao cấp — chỉ
+      tập trung vào chất lượng thật và mức giá để bạn dùng được mỗi tuần.
+    </p>
+
+    <div class="story-stats">
+      <div class="stat">
+        <div class="num-big">−60<sup>%</sup></div>
+        <div class="stat-label">Rẻ hơn yến đảo</div>
+      </div>
+      <div class="stat">
+        <div class="num-big">100<sup>%</sup></div>
+        <div class="stat-label">Chính ngạch AVS</div>
+      </div>
+      <div class="stat">
+        <div class="num-big">8.4<sup>k</sup></div>
+        <div class="stat-label">Khách hàng đã tin dùng</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="products-head reveal">
+    <h2 class="display">Bộ sưu tập <em>Malay Yến</em><br>2026.</h2>
+    <p>Ba dòng sản phẩm cho từng nhu cầu — từ yến vụn dùng đều đặn hằng
+       ngày đến yến rút lông nguyên tổ làm quà biếu trang trọng.</p>
+  </div>
+
+  <div class="grid">
+    <article class="card reveal">
+      <div class="card-num">N° 01</div>
+      <div class="card-image img-1"></div>
+      <h3 class="display">Yến tinh chế <em>loại 1</em></h3>
+      <div class="card-sub">Sarawak · 50g</div>
+      <p class="card-desc">Sợi yến trắng ngà, đã làm sạch lông kỹ, sẵn sàng chưng tại nhà — bán chạy nhất.</p>
+      <div class="card-foot">
+        <div class="card-price">890.000<small> đ</small></div>
+        <div class="card-arrow">→</div>
+      </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-num">N° 02</div>
+      <div class="card-image img-2"></div>
+      <h3 class="display">Yến rút lông <em>nguyên tổ</em></h3>
+      <div class="card-sub">Penang · 100g</div>
+      <p class="card-desc">Tổ yến giữ nguyên hình dáng, biếu tặng đẹp — chất lượng tương đương yến đảo.</p>
+      <div class="card-foot">
+        <div class="card-price">1.690.000<small> đ</small></div>
+        <div class="card-arrow">→</div>
+      </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-num">N° 03</div>
+      <div class="card-image img-3"></div>
+      <h3 class="display">Yến vụn <em>tiết kiệm</em></h3>
+      <div class="card-sub">Malaysia · 100g</div>
+      <p class="card-desc">Sợi vụn cùng nguồn yến, chưng đều đặn cho cả nhà mà không xót ví — siêu kinh tế.</p>
+      <div class="card-foot">
+        <div class="card-price">590.000<small> đ</small></div>
+        <div class="card-arrow">→</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits" id="benefits">
+  <div class="benefits-head reveal">
+    <div>
+      <div class="label">— Sáu công dụng cốt lõi</div>
+      <h2 class="display">Bổ dưỡng <em>mỗi ngày</em>, không phải dịp đặc biệt.</h2>
+    </div>
+    <p class="benefits-intro">
+      Khi giá vừa phải, yến trở thành thói quen — và đó là lúc 18 axit amin,
+      hơn 30 nguyên tố vi lượng và glycoprotein EGF thực sự phát huy tác dụng.
+    </p>
+  </div>
+
+  <div class="benefit-list">
+    <div class="benefit reveal">
+      <div class="benefit-num">01</div>
+      <div>
+        <h4>Tăng cường <em>đề kháng</em></h4>
+        <p>Glycoprotein và axit sialic kích hoạt hệ miễn dịch tự nhiên, giảm cảm vặt mùa giao mùa.</p>
+      </div>
+    </div>
+    <div class="benefit reveal">
+      <div class="benefit-num">02</div>
+      <div>
+        <h4>Phục hồi <em>thể lực</em></h4>
+        <p>Cung cấp 18 loại axit amin thiết yếu, hỗ trợ tái tạo tế bào và phục hồi sau ốm.</p>
+      </div>
+    </div>
+    <div class="benefit reveal">
+      <div class="benefit-num">03</div>
+      <div>
+        <h4>Đẹp <em>làn da</em></h4>
+        <p>EGF kích thích collagen, làm chậm lão hóa, da mịn màng và đàn hồi tự nhiên.</p>
+      </div>
+    </div>
+    <div class="benefit reveal">
+      <div class="benefit-num">04</div>
+      <div>
+        <h4>Bổ <em>phế, an thần</em></h4>
+        <p>Y học cổ truyền ghi nhận tác dụng dưỡng phế, tiêu đàm, giúp giấc ngủ sâu và yên tĩnh.</p>
+      </div>
+    </div>
+    <div class="benefit reveal">
+      <div class="benefit-num">05</div>
+      <div>
+        <h4>Hỗ trợ <em>thai kỳ</em></h4>
+        <p>Bổ sung dưỡng chất an toàn cho mẹ bầu sau tam cá nguyệt thứ nhất, giúp thai phát triển khỏe.</p>
+      </div>
+    </div>
+    <div class="benefit reveal">
+      <div class="benefit-num">06</div>
+      <div>
+        <h4>Trí não <em>minh mẫn</em></h4>
+        <p>Threonine và lysine hỗ trợ tập trung, ghi nhớ — phù hợp người lớn tuổi và lao động trí óc.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONY -->
+<section class="testimony">
+  <div class="quote-mark">“</div>
+  <blockquote class="display reveal">
+    Trước hay mua yến đảo nhưng chỉ dám chưng dịp Tết. Đổi sang Malay Yến
+    rồi <em>chưng được mỗi tuần</em> — mà chất lượng thì không thua kém gì.
+  </blockquote>
+  <div class="cite reveal">— Chị <strong>Nguyễn Thị Linh</strong> · Khách hàng thân thiết · Q.7, TP.HCM</div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="order">
+  <h2 class="display reveal">
+    Giảm <em>40%</em> đơn đầu,<br>tặng kèm 5 hũ chưng sẵn.
+  </h2>
+  <div class="cta-form reveal">
+    <p>Để lại thông tin — chuyên viên Malay Yến sẽ gửi mã ưu đãi và tư
+       vấn dòng sản phẩm phù hợp với gia đình bạn trong vòng 24 giờ.</p>
+    <div class="input-row">
+      <input type="text" placeholder="Họ tên của bạn" />
+    </div>
+    <div class="input-row">
+      <input type="text" placeholder="Số điện thoại liên hệ" />
+      <button>Nhận mã</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="foot-brand display">Malay <em>Yến</em></div>
+    <p class="foot-tag">Yến nhập khẩu chính ngạch từ Malaysia, giá thân thiện cho gia đình Việt dùng đều đặn mỗi tuần.</p>
+  </div>
+  <div>
+    <h5>Cửa hàng</h5>
+    <ul>
+      <li><a href="#">Sản phẩm</a></li>
+      <li><a href="#">Combo gia đình</a></li>
+      <li><a href="#">Quà biếu</a></li>
+    </ul>
+  </div>
+  <div>
+    <h5>Về chúng tôi</h5>
+    <ul>
+      <li><a href="#">Câu chuyện</a></li>
+      <li><a href="#">Quy trình nhập khẩu</a></li>
+      <li><a href="#">Chứng nhận AVS</a></li>
+    </ul>
+  </div>
+  <div>
+    <h5>Liên hệ</h5>
+    <ul>
+      <li><a href="#">Zalo: 0909 888 777</a></li>
+      <li><a href="#">hello@malayyen.vn</a></li>
+      <li><a href="#">99 Lê Lợi, Q.1, TP.HCM</a></li>
+    </ul>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Malay Yến. Bảo lưu mọi quyền.</span>
+    <span>Nhập khẩu chính ngạch từ Sarawak ✣</span>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.12, rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  document.querySelectorAll('.grid .card').forEach((c,i)=>{
+    c.style.transitionDelay = (i*0.12)+'s';
+  });
+  document.querySelectorAll('.benefit-list .benefit').forEach((b,i)=>{
+    b.style.transitionDelay = (i*0.08)+'s';
+  });
+</script>
+</body>
+</html>
