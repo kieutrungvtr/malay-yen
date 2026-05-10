@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg" cx="20%" cy="20%" r="100%">
+      <stop offset="0%" stop-color="#f4ede0"/>
+      <stop offset="60%" stop-color="#ebe1cc"/>
+      <stop offset="100%" stop-color="#d8c8a4"/>
+    </radialGradient>
+    <radialGradient id="nest" cx="38%" cy="32%" r="78%">
+      <stop offset="0%" stop-color="#f5e9cd"/>
+      <stop offset="55%" stop-color="#d8bf8b"/>
+      <stop offset="100%" stop-color="#9b7c44"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Noise texture overlay -->
+  <rect width="1200" height="630" fill="rgba(28,42,35,.04)"/>
+
+  <!-- Brand mark -->
+  <g transform="translate(80,80)">
+    <circle cx="28" cy="28" r="28" fill="none" stroke="#1c2a23" stroke-width="1.5"/>
+    <text x="28" y="40" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="32" fill="#1c2a23">m</text>
+    <text x="76" y="38" font-family="Fraunces, serif" font-size="26" fill="#1c2a23">Malay <tspan font-style="italic" fill="#2c4a3e">Yến</tspan></text>
+  </g>
+
+  <!-- Headline -->
+  <g transform="translate(80,200)">
+    <text font-family="Fraunces, serif" font-weight="300" font-size="96" fill="#1c2a23" letter-spacing="-2">
+      <tspan x="0" y="0">Yến <tspan font-style="italic" fill="#2c4a3e">chuẩn</tspan> Malaysia,</tspan>
+      <tspan x="0" y="110">giá <tspan font-style="italic" fill="#a8492a">thân thiện</tspan>.</tspan>
+    </text>
+  </g>
+
+  <!-- Subhead -->
+  <g transform="translate(80,460)">
+    <text font-family="Be Vietnam Pro, sans-serif" font-size="22" fill="#1c2a23" opacity=".75">
+      <tspan x="0" y="0">Tổ yến nhập khẩu chính ngạch từ Sarawak — đạt chuẩn AVS quốc tế.</tspan>
+      <tspan x="0" y="34">Giá chỉ bằng một phần ba yến đảo, dưỡng chất gần như tương đương.</tspan>
+    </text>
+  </g>
+
+  <!-- Tags -->
+  <g transform="translate(80,560)">
+    <g>
+      <rect x="0" y="0" width="200" height="38" rx="19" fill="none" stroke="#1c2a23" stroke-width="1"/>
+      <text x="100" y="24" text-anchor="middle" font-family="Be Vietnam Pro, sans-serif" font-size="11" fill="#1c2a23" letter-spacing="2">CHUẨN AVS MALAYSIA</text>
+    </g>
+    <g transform="translate(220,0)">
+      <rect x="0" y="0" width="180" height="38" rx="19" fill="none" stroke="#1c2a23" stroke-width="1"/>
+      <text x="90" y="24" text-anchor="middle" font-family="Be Vietnam Pro, sans-serif" font-size="11" fill="#1c2a23" letter-spacing="2">TỪ 590K / 100G</text>
+    </g>
+    <g transform="translate(420,0)">
+      <rect x="0" y="0" width="220" height="38" rx="19" fill="#2c4a3e"/>
+      <text x="110" y="24" text-anchor="middle" font-family="Be Vietnam Pro, sans-serif" font-size="11" fill="#f4ede0" letter-spacing="2">NHẬP CHÍNH NGẠCH 2026</text>
+    </g>
+  </g>
+
+  <!-- Bird's nest illustration on right -->
+  <g transform="translate(750,80)">
+    <circle cx="200" cy="220" r="220" fill="url(#nest)"/>
+    <circle cx="200" cy="220" r="220" fill="none" stroke="rgba(70,45,18,.25)" stroke-width="14"/>
+
+    <!-- fibers -->
+    <g stroke="#7a5a2a" stroke-width="1.4" fill="none" opacity=".5">
+      <path d="M-10 200 Q120 100 270 140 T440 210"/>
+      <path d="M0 270 Q150 200 320 230 T440 280"/>
+      <path d="M20 140 Q170 50 320 90 T440 160"/>
+      <path d="M30 340 Q180 250 320 300 T440 360"/>
+      <path d="M-10 410 Q150 320 290 360 T430 410"/>
+    </g>
+    <g stroke="#8b6a32" stroke-width=".9" fill="none" opacity=".55">
+      <path d="M40 170 Q180 110 320 160 T430 190"/>
+      <path d="M40 230 Q200 170 340 210 T430 240"/>
+      <path d="M40 290 Q200 230 340 270 T440 300"/>
+    </g>
+    <g stroke="#a08054" stroke-width=".7" fill="none" opacity=".5">
+      <path d="M0 210 Q140 180 280 190 T440 220"/>
+      <path d="M0 250 Q140 220 280 230 T440 260"/>
+      <path d="M0 300 Q140 270 280 280 T440 310"/>
+    </g>
+    <g stroke="#6b4f24" stroke-width=".7" fill="none" opacity=".4">
+      <path d="M100 0 Q130 220 110 440"/>
+      <path d="M180 0 Q200 220 170 440"/>
+      <path d="M260 0 Q280 220 250 440"/>
+      <path d="M340 20 Q360 220 340 430"/>
+    </g>
+
+    <!-- inner cup -->
+    <ellipse cx="190" cy="200" rx="120" ry="78" fill="rgba(60,40,18,.25)"/>
+    <ellipse cx="190" cy="200" rx="115" ry="72" fill="none" stroke="rgba(50,32,12,.32)" stroke-width="2"/>
+    <!-- shine -->
+    <ellipse cx="120" cy="120" rx="120" ry="60" fill="rgba(255,250,235,.55)" transform="rotate(-15 120 120)"/>
+  </g>
+
+  <!-- Bottom URL strip -->
+  <g transform="translate(80,610)">
+    <text font-family="Fraunces, serif" font-style="italic" font-size="18" fill="#1c2a23" opacity=".5">malay-yen.onrender.com  ·  Sarawak → Sài Gòn</text>
+  </g>
+</svg>

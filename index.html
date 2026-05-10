@@ -5,6 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Malay Yến — Yến Malaysia chuẩn AVS, giá thân thiện</title>
 <meta name="description" content="Yến sào Malaysia nhập khẩu chính ngạch từ Sarawak, đạt chuẩn AVS quốc tế. Giá bằng 1/3 yến đảo, dưỡng chất tương đương." />
+<meta name="theme-color" content="#1c2a23" />
+<meta name="keywords" content="yến sào Malaysia, yến Sarawak, yến chính ngạch, AVS, yến tinh chế, yến rút lông, yến vụn, yến giá rẻ, yến chuẩn quốc tế" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="vi_VN" />
+<meta property="og:site_name" content="Malay Yến" />
+<meta property="og:title" content="Malay Yến — Yến Malaysia chuẩn AVS, giá thân thiện" />
+<meta property="og:description" content="Tổ yến nhập khẩu chính ngạch từ Sarawak. Đạt chuẩn AVS quốc tế, giá chỉ bằng 1/3 yến đảo." />
+<meta property="og:url" content="https://malay-yen.onrender.com" />
+<meta property="og:image" content="https://malay-yen.onrender.com/og.svg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Malay Yến — Yến Malaysia chuẩn AVS" />
+<meta name="twitter:description" content="Yến nhập chính ngạch từ Sarawak, giá bằng 1/3 yến đảo." />
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Malay Yến",
+  "url":"https://malay-yen.onrender.com",
+  "logo":"https://malay-yen.onrender.com/og.svg",
+  "description":"Yến sào nhập khẩu chính ngạch từ Sarawak, Malaysia.",
+  "address":{"@type":"PostalAddress","streetAddress":"99 Lê Lợi","addressLocality":"Quận 1","addressRegion":"TP.HCM","addressCountry":"VN"},
+  "contactPoint":{"@type":"ContactPoint","telephone":"+84-909-888-777","contactType":"customer service","areaServed":"VN","availableLanguage":["Vietnamese"]},
+  "sameAs":["https://zalo.me/0909888777"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "itemListElement":[
+    {"@type":"Product","position":1,"name":"Yến tinh chế loại 1 — 50g","description":"Sợi yến trắng ngà, đã làm sạch lông kỹ, sẵn sàng chưng tại nhà.","brand":"Malay Yến","offers":{"@type":"Offer","price":"890000","priceCurrency":"VND","availability":"https://schema.org/InStock"}},
+    {"@type":"Product","position":2,"name":"Yến rút lông nguyên tổ — 100g","description":"Tổ yến giữ nguyên hình dáng, biếu tặng đẹp, chất lượng tương đương yến đảo.","brand":"Malay Yến","offers":{"@type":"Offer","price":"1690000","priceCurrency":"VND","availability":"https://schema.org/InStock"}},
+    {"@type":"Product","position":3,"name":"Yến vụn tiết kiệm — 100g","description":"Sợi vụn cùng nguồn yến, kinh tế cho cả nhà dùng đều đặn.","brand":"Malay Yến","offers":{"@type":"Offer","price":"590000","priceCurrency":"VND","availability":"https://schema.org/InStock"}}
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,30..100;1,9..144,300..900,30..100&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -426,6 +468,101 @@
   .card:hover .card-arrow{
     background:var(--ink);color:var(--ivory);transform:rotate(-45deg);
   }
+
+  /* COMBO */
+  .combo{
+    padding:120px 48px;
+    background:var(--ivory);
+    border-top:1px solid var(--line);
+  }
+  .combo-head{
+    display:flex;align-items:end;justify-content:space-between;
+    gap:40px;margin-bottom:60px;
+  }
+  .combo-head .label{color:var(--gold);}
+  .combo-head h2{
+    font-family:'Fraunces',serif;
+    font-size:clamp(40px,5.5vw,80px);
+    font-weight:300;line-height:1;letter-spacing:-.02em;margin-top:18px;
+  }
+  .combo-head h2 em{font-style:italic;color:var(--gold);}
+  .combo-head p{font-size:15px;line-height:1.7;opacity:.8;max-width:380px;}
+
+  .combo-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  .combo-card{
+    background:var(--cream);
+    border:1px solid var(--line);
+    padding:36px 32px;
+    position:relative;
+    display:flex;flex-direction:column;
+    transition:transform .4s ease, box-shadow .4s ease;
+  }
+  .combo-card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -24px rgba(28,42,35,.22);}
+  .combo-card.featured{
+    background:var(--ink);
+    color:var(--ivory);
+    border-color:var(--ink);
+  }
+  .combo-card.featured .combo-name em,
+  .combo-card.featured .combo-price{color:var(--gold-soft);}
+  .combo-card.featured .combo-divider{border-color:rgba(244,237,224,.18);}
+  .combo-card.featured ul li::before{color:var(--gold-soft);}
+  .combo-badge{
+    position:absolute;top:-13px;left:32px;
+    background:var(--gold);color:var(--ink);
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    padding:6px 14px;border-radius:999px;font-weight:500;
+  }
+  .combo-eyebrow{
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    opacity:.7;margin-bottom:14px;
+  }
+  .combo-name{
+    font-family:'Fraunces',serif;
+    font-size:32px;font-weight:300;line-height:1.05;letter-spacing:-.01em;
+    margin-bottom:8px;
+  }
+  .combo-name em{font-style:italic;color:var(--jade);}
+  .combo-tag{font-size:13px;opacity:.75;margin-bottom:20px;}
+  .combo-divider{
+    border:none;border-top:1px dashed var(--line);
+    margin:8px 0 18px;
+  }
+  .combo-card ul{
+    list-style:none;display:flex;flex-direction:column;gap:10px;
+    margin-bottom:24px;flex:1;
+  }
+  .combo-card ul li{
+    font-size:14px;line-height:1.5;padding-left:22px;position:relative;
+  }
+  .combo-card ul li::before{
+    content:"✓";position:absolute;left:0;top:0;
+    color:var(--jade);font-weight:600;
+  }
+  .combo-price-row{
+    display:flex;align-items:baseline;justify-content:space-between;
+    gap:12px;margin-bottom:18px;
+  }
+  .combo-price{
+    font-family:'Fraunces',serif;font-size:30px;font-weight:400;
+    color:var(--ink);
+  }
+  .combo-was{
+    font-family:'Fraunces',serif;font-size:15px;
+    text-decoration:line-through;opacity:.45;
+  }
+  .combo-card .btn-primary{
+    background:var(--ink);color:var(--ivory);
+    text-align:center;padding:14px 24px;
+    border:1px solid var(--ink);
+  }
+  .combo-card.featured .btn-primary{
+    background:var(--gold-soft);color:var(--ink);border-color:var(--gold-soft);
+  }
+  .combo-card.featured .btn-primary:hover{background:var(--ivory);border-color:var(--ivory);}
 
   /* PROCESS */
   .process{
@@ -955,6 +1092,8 @@
     .process-steps::before{display:none;}
     .recipe-grid{grid-template-columns:1fr;}
     .testi-grid{grid-template-columns:1fr;}
+    .combo-grid{grid-template-columns:1fr;}
+    .combo-head{flex-direction:column;align-items:start;gap:18px;}
   }
 
   @media (max-width:960px){
@@ -963,7 +1102,7 @@
     .hero{grid-template-columns:1fr;padding:120px 24px 60px;gap:40px;}
     .hero-meta{display:none;}
     .hero-visual{justify-self:center;max-width:380px;}
-    .story,.products,.benefits,.testimony,.cta,.process,.compare,.recipes,.faq{padding:80px 24px;}
+    .story,.products,.benefits,.testimony,.cta,.process,.compare,.recipes,.faq,.combo{padding:80px 24px;}
     .story{grid-template-columns:1fr;gap:40px;}
     .grid{grid-template-columns:1fr;}
     .benefits-head{grid-template-columns:1fr;gap:24px;}
@@ -999,6 +1138,7 @@
   <ul>
     <li><a href="#story">Câu chuyện</a></li>
     <li><a href="#products">Sản phẩm</a></li>
+    <li><a href="#combo">Combo</a></li>
     <li><a href="#process">Quy trình</a></li>
     <li><a href="#benefits">Công dụng</a></li>
     <li><a href="#recipes">Cách dùng</a></li>
@@ -1437,6 +1577,76 @@
         <div class="card-price"><del>790.000đ</del>590.000<small> đ</small></div>
         <div class="card-arrow">→</div>
       </div>
+    </article>
+  </div>
+</section>
+
+<!-- COMBO -->
+<section class="combo" id="combo">
+  <div class="combo-head reveal">
+    <div>
+      <div class="label">— Combo tiết kiệm</div>
+      <h2 class="display">Mua theo <em>gói</em>, tiết kiệm thêm.</h2>
+    </div>
+    <p>Combo đã tính chiết khấu sẵn, kèm quà tặng — đặt một lần, dùng cả tháng cho gia đình.</p>
+  </div>
+
+  <div class="combo-grid">
+    <article class="combo-card reveal">
+      <div class="combo-eyebrow">Gói thử</div>
+      <div class="combo-name">Combo <em>Khởi đầu</em></div>
+      <div class="combo-tag">Cho người lần đầu dùng yến</div>
+      <hr class="combo-divider"/>
+      <ul>
+        <li>30g yến tinh chế loại 1</li>
+        <li>3 hũ yến chưng sẵn (đường phèn)</li>
+        <li>Hướng dẫn chưng yến tại nhà</li>
+        <li>Tem AVS truy xuất nguồn</li>
+      </ul>
+      <div class="combo-price-row">
+        <span class="combo-price">590.000đ</span>
+        <span class="combo-was">760.000đ</span>
+      </div>
+      <a href="#order" class="btn-primary">Đặt combo này</a>
+    </article>
+
+    <article class="combo-card featured reveal">
+      <div class="combo-badge">Bán chạy</div>
+      <div class="combo-eyebrow">Cả tuần dùng đều</div>
+      <div class="combo-name">Combo <em>Gia đình</em></div>
+      <div class="combo-tag">Đủ cho 4 người dùng 1 tháng</div>
+      <hr class="combo-divider"/>
+      <ul>
+        <li>100g yến tinh chế + 100g yến vụn</li>
+        <li>10 hũ yến chưng sẵn đa vị</li>
+        <li>Hộp gỗ trữ yến chuyên dụng</li>
+        <li>Tư vấn dinh dưỡng 1-1</li>
+        <li>Free ship toàn quốc</li>
+      </ul>
+      <div class="combo-price-row">
+        <span class="combo-price">1.490.000đ</span>
+        <span class="combo-was">2.180.000đ</span>
+      </div>
+      <a href="#order" class="btn-primary">Đặt combo này</a>
+    </article>
+
+    <article class="combo-card reveal">
+      <div class="combo-eyebrow">Gói biếu tặng</div>
+      <div class="combo-name">Combo <em>Sang trọng</em></div>
+      <div class="combo-tag">Quà biếu trang trọng dịp lễ Tết</div>
+      <hr class="combo-divider"/>
+      <ul>
+        <li>100g yến rút lông nguyên tổ</li>
+        <li>Hộp gỗ óc chó khắc tên</li>
+        <li>Thiệp viết tay theo yêu cầu</li>
+        <li>Túi vải lụa Sarawak</li>
+        <li>Giao tận tay người nhận</li>
+      </ul>
+      <div class="combo-price-row">
+        <span class="combo-price">1.890.000đ</span>
+        <span class="combo-was">2.390.000đ</span>
+      </div>
+      <a href="#order" class="btn-primary">Đặt combo này</a>
     </article>
   </div>
 </section>
@@ -1968,24 +2178,24 @@
   <h2 class="display reveal">
     Giảm <em>40%</em> đơn đầu,<br>tặng kèm 5 hũ chưng sẵn.
   </h2>
-  <div class="cta-form reveal">
+  <form class="cta-form reveal" id="leadForm" novalidate>
     <p>Để lại thông tin — chuyên viên Malay Yến sẽ gửi mã ưu đãi và tư
        vấn dòng sản phẩm phù hợp với gia đình bạn trong vòng 24 giờ.</p>
     <div class="input-row">
-      <input type="text" placeholder="Họ tên của bạn" />
+      <input type="text" name="name" required minlength="2" placeholder="Họ tên của bạn" />
     </div>
     <div class="input-row">
-      <input type="tel" placeholder="Số điện thoại liên hệ" />
-      <button>Nhận mã</button>
+      <input type="tel" name="phone" required pattern="[0-9 +\-]{9,15}" placeholder="Số điện thoại liên hệ" />
+      <button type="submit">Nhận mã</button>
     </div>
     <div class="form-note">
       <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
         <rect x="2" y="6" width="10" height="7" rx="1"/>
         <path d="M4 6V4a3 3 0 016 0v2"/>
       </svg>
-      Thông tin bảo mật, chỉ dùng để liên hệ tư vấn — không gửi spam.
+      <span id="formStatus">Thông tin bảo mật, chỉ dùng để liên hệ tư vấn — không gửi spam.</span>
     </div>
-  </div>
+  </form>
 </section>
 
 <!-- FOOTER -->
@@ -2077,6 +2287,10 @@
     t.style.transitionDelay = (i*0.1)+'s';
   });
 
+  document.querySelectorAll('.combo-grid .combo-card').forEach((c,i)=>{
+    c.style.transitionDelay = (i*0.12)+'s';
+  });
+
   // Close other open <details> for cleaner accordion behavior
   document.querySelectorAll('.faq details').forEach(d=>{
     d.addEventListener('toggle',()=>{
@@ -2087,6 +2301,49 @@
       }
     });
   });
+
+  // Form handling — graceful client-side feedback
+  const form = document.getElementById('leadForm');
+  const statusEl = document.getElementById('formStatus');
+  if(form){
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const phone = form.phone.value.trim();
+      if(name.length < 2){
+        statusEl.textContent = 'Vui lòng nhập đầy đủ họ tên.';
+        statusEl.style.color = 'var(--rust)';
+        form.name.focus();
+        return;
+      }
+      if(!/^[0-9 +\-]{9,15}$/.test(phone)){
+        statusEl.textContent = 'Số điện thoại chưa hợp lệ — kiểm tra lại nhé.';
+        statusEl.style.color = 'var(--rust)';
+        form.phone.focus();
+        return;
+      }
+      statusEl.style.color = 'var(--jade)';
+      statusEl.textContent = 'Cảm ơn ' + name + '! Chuyên viên sẽ gọi bạn trong 24 giờ.';
+      form.reset();
+    });
+  }
+
+  // Active nav highlight on scroll
+  const navLinks = document.querySelectorAll('nav ul a');
+  const sections = [...navLinks].map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if(sections.length){
+    const navIo = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const id = e.target.id;
+          navLinks.forEach(a=>{
+            a.style.color = a.getAttribute('href') === '#'+id ? 'var(--jade)' : '';
+          });
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px'});
+    sections.forEach(s=>navIo.observe(s));
+  }
 </script>
 </body>
 </html>
