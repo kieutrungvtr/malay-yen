@@ -21,7 +21,7 @@
   <g transform="translate(80,80)">
     <circle cx="28" cy="28" r="28" fill="none" stroke="#1c2a23" stroke-width="1.5"/>
     <text x="28" y="40" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="32" fill="#1c2a23">m</text>
-    <text x="76" y="38" font-family="Fraunces, serif" font-size="26" fill="#1c2a23">Malay <tspan font-style="italic" fill="#2c4a3e">Yến</tspan></text>
+    <text x="76" y="38" font-family="Fraunces, serif" font-size="26" fill="#1c2a23">My <tspan font-style="italic" fill="#2c4a3e">Yến</tspan></text>
   </g>
 
   <!-- Headline -->

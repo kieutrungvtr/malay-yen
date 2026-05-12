@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Malay Yến — Yến Malaysia chuẩn AVS, giá thân thiện</title>
+<title>My Yến — Yến Malaysia chuẩn AVS, giá thân thiện</title>
 <meta name="description" content="Yến sào Malaysia nhập khẩu chính ngạch từ Sarawak, đạt chuẩn AVS quốc tế. Giá bằng 1/3 yến đảo, dưỡng chất tương đương." />
 <meta name="theme-color" content="#1c2a23" />
 <meta name="keywords" content="yến sào Malaysia, yến Sarawak, yến chính ngạch, AVS, yến tinh chế, yến rút lông, yến vụn, yến giá rẻ, yến chuẩn quốc tế" />
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="vi_VN" />
-<meta property="og:site_name" content="Malay Yến" />
-<meta property="og:title" content="Malay Yến — Yến Malaysia chuẩn AVS, giá thân thiện" />
+<meta property="og:site_name" content="My Yến" />
+<meta property="og:title" content="My Yến — Yến Malaysia chuẩn AVS, giá thân thiện" />
 <meta property="og:description" content="Tổ yến nhập khẩu chính ngạch từ Sarawak. Đạt chuẩn AVS quốc tế, giá chỉ bằng 1/3 yến đảo." />
 <meta property="og:url" content="https://malay-yen.onrender.com" />
 <meta property="og:image" content="https://malay-yen.onrender.com/og.svg" />
@@ -19,14 +19,14 @@
 <meta property="og:image:height" content="630" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Malay Yến — Yến Malaysia chuẩn AVS" />
+<meta name="twitter:title" content="My Yến — Yến Malaysia chuẩn AVS" />
 <meta name="twitter:description" content="Yến nhập chính ngạch từ Sarawak, giá bằng 1/3 yến đảo." />
 
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"Organization",
-  "name":"Malay Yến",
+  "name":"My Yến",
   "url":"https://malay-yen.onrender.com",
   "logo":"https://malay-yen.onrender.com/og.svg",
   "description":"Yến sào nhập khẩu chính ngạch từ Sarawak, Malaysia.",
@@ -40,9 +40,9 @@
   "@context":"https://schema.org",
   "@type":"ItemList",
   "itemListElement":[
-    {"@type":"Product","position":1,"name":"Yến tinh chế loại 1 — 50g","description":"Sợi yến trắng ngà, đã làm sạch lông kỹ, sẵn sàng chưng tại nhà.","brand":"Malay Yến","offers":{"@type":"Offer","price":"890000","priceCurrency":"VND","availability":"https://schema.org/InStock"}},
-    {"@type":"Product","position":2,"name":"Yến rút lông nguyên tổ — 100g","description":"Tổ yến giữ nguyên hình dáng, biếu tặng đẹp, chất lượng tương đương yến đảo.","brand":"Malay Yến","offers":{"@type":"Offer","price":"1690000","priceCurrency":"VND","availability":"https://schema.org/InStock"}},
-    {"@type":"Product","position":3,"name":"Yến vụn tiết kiệm — 100g","description":"Sợi vụn cùng nguồn yến, kinh tế cho cả nhà dùng đều đặn.","brand":"Malay Yến","offers":{"@type":"Offer","price":"590000","priceCurrency":"VND","availability":"https://schema.org/InStock"}}
+    {"@type":"Product","position":1,"name":"Yến tinh chế loại 1 — 50g","description":"Sợi yến trắng ngà, đã làm sạch lông kỹ, sẵn sàng chưng tại nhà.","brand":"My Yến","offers":{"@type":"Offer","price":"890000","priceCurrency":"VND","availability":"https://schema.org/InStock"}},
+    {"@type":"Product","position":2,"name":"Yến rút lông nguyên tổ — 100g","description":"Tổ yến giữ nguyên hình dáng, biếu tặng đẹp, chất lượng tương đương yến đảo.","brand":"My Yến","offers":{"@type":"Offer","price":"1690000","priceCurrency":"VND","availability":"https://schema.org/InStock"}},
+    {"@type":"Product","position":3,"name":"Yến vụn tiết kiệm — 100g","description":"Sợi vụn cùng nguồn yến, kinh tế cho cả nhà dùng đều đặn.","brand":"My Yến","offers":{"@type":"Offer","price":"590000","priceCurrency":"VND","availability":"https://schema.org/InStock"}}
   ]
 }
 </script>
@@ -132,6 +132,54 @@
     text-decoration:none;
   }
   .nav-cta:hover{background:var(--ink);color:var(--ivory);}
+
+  /* Mobile menu toggle (hidden on desktop) */
+  .nav-burger{
+    display:none;
+    width:42px;height:42px;
+    border:1px solid var(--ink);
+    background:transparent;
+    border-radius:50%;
+    cursor:pointer;
+    align-items:center;justify-content:center;
+    padding:0;
+    transition:background .3s ease, color .3s ease;
+  }
+  .nav-burger:hover{background:var(--ink);color:var(--ivory);}
+  .nav-burger svg{width:18px;height:18px;color:currentColor;}
+  body.menu-open{overflow:hidden;}
+  .mobile-menu{
+    position:fixed;inset:0;
+    background:var(--ivory);
+    z-index:80;
+    padding:90px 32px 40px;
+    display:flex;flex-direction:column;gap:0;
+    transform:translateY(-100%);
+    transition:transform .5s cubic-bezier(.4,.0,.2,1);
+    visibility:hidden;
+  }
+  .mobile-menu.open{transform:translateY(0);visibility:visible;}
+  .mobile-menu a{
+    color:var(--ink);text-decoration:none;
+    font-family:'Fraunces',serif;
+    font-size:32px;font-weight:300;letter-spacing:-.01em;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .mobile-menu a:last-of-type{border-bottom:none;}
+  .mobile-menu a span{
+    font-family:'Be Vietnam Pro',sans-serif;
+    font-size:13px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--gold);opacity:.6;
+  }
+  .mobile-menu .nav-cta{
+    margin-top:30px;
+    text-align:center;
+    background:var(--ink);color:var(--ivory);
+    font-size:13px;padding:18px 24px;
+    justify-content:center;
+  }
 
   /* HERO */
   .hero{
@@ -235,7 +283,9 @@
     display:flex;align-items:center;gap:14px;
     font-size:11px;letter-spacing:.28em;text-transform:uppercase;
     color:var(--ink);opacity:.6;
+    transition:opacity .5s ease;
   }
+  body.scrolled .scroll-cue{opacity:0;pointer-events:none;}
   .scroll-cue::before{
     content:"";width:60px;height:1px;background:var(--ink);
     animation:line 2s ease-in-out infinite;
@@ -981,6 +1031,23 @@
     cursor:pointer;transition:all .3s ease;
   }
   .input-row button:hover{background:var(--jade);}
+  .combo-pill{
+    display:flex;align-items:center;gap:10px;
+    background:var(--cream);
+    padding:10px 14px 10px 16px;
+    border-radius:999px;
+    font-size:13px;
+    align-self:flex-start;
+    border:1px solid var(--line);
+  }
+  .combo-pill span{opacity:.7;}
+  .combo-pill strong{font-weight:500;color:var(--jade);}
+  .combo-pill button{
+    background:transparent;border:none;cursor:pointer;
+    font-size:20px;line-height:1;color:var(--ink);opacity:.55;
+    padding:0 4px;font-family:inherit;
+  }
+  .combo-pill button:hover{opacity:1;}
   .form-note{
     font-size:12px;opacity:.55;line-height:1.5;
     display:flex;align-items:center;gap:8px;
@@ -1084,6 +1151,36 @@
   .hero-visual{opacity:0;animation:fadeIn 1.4s .5s ease forwards;}
   @keyframes fadeIn{to{opacity:1}}
 
+  /* A11y — skip link and focus */
+  .skip-link{
+    position:absolute;top:-100px;left:12px;
+    background:var(--ink);color:var(--ivory);
+    padding:10px 18px;border-radius:6px;z-index:200;
+    font-size:13px;text-decoration:none;
+    transition:top .2s ease;
+  }
+  .skip-link:focus{top:12px;}
+  :focus-visible{
+    outline:2px solid var(--jade);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+  .nav-cta:focus-visible,.btn-primary:focus-visible,.float-zalo:focus-visible{
+    outline-offset:4px;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{
+      animation-duration:.001ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;
+      scroll-behavior:auto !important;
+    }
+    .reveal{opacity:1;transform:none;}
+    .marquee-track{animation:none;}
+  }
+
   /* Responsive */
   @media (max-width:1100px){
     .trust{grid-template-columns:repeat(2,1fr);gap:30px;}
@@ -1099,6 +1196,8 @@
   @media (max-width:960px){
     nav{padding:18px 22px;}
     nav ul{display:none;}
+    nav .nav-cta{display:none;}
+    .nav-burger{display:inline-flex;}
     .hero{grid-template-columns:1fr;padding:120px 24px 60px;gap:40px;}
     .hero-meta{display:none;}
     .hero-visual{justify-self:center;max-width:380px;}
@@ -1124,16 +1223,18 @@
 </head>
 <body>
 
+<a class="skip-link" href="#story">Bỏ qua, đi đến nội dung</a>
+
 <!-- FLOATING ZALO -->
-<a class="float-zalo" href="https://zalo.me/0909888777" target="_blank" rel="noopener">
-  <span class="float-zalo-ico">Z</span>
+<a class="float-zalo" href="https://zalo.me/0909888777" target="_blank" rel="noopener" aria-label="Tư vấn qua Zalo, số 0909 888 777">
+  <span class="float-zalo-ico" aria-hidden="true">Z</span>
   <span>Tư vấn qua Zalo</span>
 </a>
 
-<nav>
+<nav aria-label="Điều hướng chính">
   <a href="#top" class="brand" style="text-decoration:none;color:inherit;">
     <div class="brand-mark">m</div>
-    <div class="brand-name">Malay <em>Yến</em></div>
+    <div class="brand-name">My <em>Yến</em></div>
   </a>
   <ul>
     <li><a href="#story">Câu chuyện</a></li>
@@ -1145,7 +1246,24 @@
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <a href="#order" class="nav-cta">Đặt hàng</a>
+  <button class="nav-burger" id="navBurger" aria-label="Mở menu" aria-controls="mobileMenu" aria-expanded="false">
+    <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+      <path d="M2 5h14M2 9h14M2 13h14"/>
+    </svg>
+  </button>
 </nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#story" data-mm><span>01</span>Câu chuyện</a>
+  <a href="#products" data-mm><span>02</span>Sản phẩm</a>
+  <a href="#combo" data-mm><span>03</span>Combo</a>
+  <a href="#process" data-mm><span>04</span>Quy trình</a>
+  <a href="#benefits" data-mm><span>05</span>Công dụng</a>
+  <a href="#recipes" data-mm><span>06</span>Cách dùng</a>
+  <a href="#faq" data-mm><span>07</span>FAQ</a>
+  <a href="#order" class="nav-cta" data-mm>Đặt hàng ngay</a>
+</div>
 
 <!-- HERO -->
 <section class="hero" id="top">
@@ -1335,48 +1453,99 @@
       Đưa yến <em>chất lượng</em><br>về với mỗi gia đình<br>Việt Nam.
     </h2>
 
-    <!-- Map illustration -->
+    <!-- Map illustration: Vietnam & Malaysia (geographically positioned) -->
     <div class="map-wrap">
-      <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" aria-label="Bản đồ Sarawak đến Sài Gòn">
-        <!-- subtle grid -->
+      <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg" aria-label="Bản đồ Việt Nam và Malaysia">
+        <!-- Sea / background grid -->
+        <rect x="0" y="0" width="600" height="380" fill="rgba(44,74,62,.03)"/>
         <g stroke="rgba(28,42,35,.06)" stroke-width=".5">
-          <line x1="0" y1="50" x2="600" y2="50"/>
-          <line x1="0" y1="120" x2="600" y2="120"/>
-          <line x1="0" y1="200" x2="600" y2="200"/>
-          <line x1="100" y1="0" x2="100" y2="280"/>
-          <line x1="300" y1="0" x2="300" y2="280"/>
-          <line x1="500" y1="0" x2="500" y2="280"/>
+          <line x1="0" y1="80" x2="600" y2="80"/>
+          <line x1="0" y1="180" x2="600" y2="180"/>
+          <line x1="0" y1="280" x2="600" y2="280"/>
+          <line x1="120" y1="0" x2="120" y2="380"/>
+          <line x1="300" y1="0" x2="300" y2="380"/>
+          <line x1="480" y1="0" x2="480" y2="380"/>
         </g>
 
-        <!-- Vietnam outline (stylized) -->
-        <path d="M120 30 C115 60 130 90 122 130 C115 165 138 200 130 235 L150 240 C162 200 175 165 168 130 C160 95 178 60 150 30 Z"
-              fill="rgba(44,74,62,.15)" stroke="var(--jade)" stroke-width="1.2"/>
-        <!-- Vietnam dot HCMC -->
-        <circle cx="138" cy="225" r="6" fill="var(--sienna)"/>
-        <circle cx="138" cy="225" r="11" fill="none" stroke="var(--sienna)" stroke-width="1" opacity=".5">
-          <animate attributeName="r" from="6" to="18" dur="2s" repeatCount="indefinite"/>
+        <!-- Cardinal indicator -->
+        <g transform="translate(560,40)" opacity=".55">
+          <circle cx="0" cy="0" r="18" fill="none" stroke="var(--ink)" stroke-width="1"/>
+          <path d="M0 -14 L4 0 L0 -2 L-4 0 Z" fill="var(--jade)"/>
+          <text x="0" y="-22" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="11" fill="var(--ink)">N</text>
+        </g>
+
+        <!-- Vietnam (S-curve, left side, north to south) -->
+        <path d="
+          M 130 18
+          C 110 28 165 50 145 78
+          C 130 105 175 130 150 158
+          C 130 185 155 205 175 222
+          C 195 240 220 248 240 262
+          C 218 268 195 258 175 248
+          C 160 240 150 248 158 260
+          C 155 254 168 270 160 274
+          C 152 268 140 252 145 232
+          C 135 215 125 195 138 175
+          C 152 152 128 130 142 105
+          C 155 85 122 60 140 30
+          C 140 24 135 20 130 18 Z"
+          fill="rgba(44,74,62,.18)" stroke="var(--jade)" stroke-width="1.4"/>
+        <!-- Vietnam label -->
+        <text x="55" y="120" font-family="Fraunces, serif" font-style="italic" font-size="22" fill="var(--jade)" opacity=".75">Việt Nam</text>
+
+        <!-- HCMC marker -->
+        <circle cx="200" cy="256" r="6" fill="var(--sienna)"/>
+        <circle cx="200" cy="256" r="6" fill="none" stroke="var(--sienna)" stroke-width="1" opacity=".5">
+          <animate attributeName="r" from="6" to="20" dur="2s" repeatCount="indefinite"/>
           <animate attributeName="opacity" from=".7" to="0" dur="2s" repeatCount="indefinite"/>
         </circle>
-        <text x="155" y="230" font-family="Be Vietnam Pro, sans-serif" font-size="11" fill="var(--ink)" letter-spacing="1.5">TP. HỒ CHÍ MINH</text>
-        <text x="155" y="245" font-family="Fraunces, serif" font-style="italic" font-size="10" fill="var(--ink)" opacity=".6">Đến nơi · 10°50′N</text>
+        <text x="212" y="252" font-family="Be Vietnam Pro, sans-serif" font-size="11" fill="var(--ink)" letter-spacing="1.5" font-weight="500">TP. HỒ CHÍ MINH</text>
+        <text x="212" y="267" font-family="Fraunces, serif" font-style="italic" font-size="10" fill="var(--ink)" opacity=".6">Đến nơi · 10°50′N</text>
 
-        <!-- Malaysia outline (Sarawak — Borneo) -->
-        <path d="M380 90 C420 80 460 95 490 110 C520 125 540 145 530 170 C520 185 480 195 440 188 C405 180 375 165 370 140 C368 120 372 100 380 90 Z"
-              fill="rgba(168,73,42,.18)" stroke="var(--sienna)" stroke-width="1.2"/>
-        <circle cx="460" cy="135" r="6" fill="var(--jade)"/>
-        <circle cx="460" cy="135" r="11" fill="none" stroke="var(--jade)" stroke-width="1" opacity=".5">
-          <animate attributeName="r" from="6" to="18" dur="2.4s" repeatCount="indefinite"/>
+        <!-- Malaysia Peninsula (south of Thailand, left-bottom) -->
+        <path d="
+          M 132 282
+          C 145 280 165 282 178 290
+          C 188 298 195 310 192 322
+          C 188 335 175 342 162 340
+          C 152 338 144 330 142 320
+          C 140 308 130 300 132 282 Z"
+          fill="rgba(168,73,42,.2)" stroke="var(--sienna)" stroke-width="1.2"/>
+
+        <!-- Borneo / Sarawak (right side, bottom — only NW portion shown) -->
+        <path d="
+          M 290 270
+          C 320 258 360 254 400 258
+          C 440 262 480 270 515 285
+          C 545 298 562 318 555 338
+          C 540 358 500 365 460 360
+          C 420 354 380 348 340 340
+          C 310 332 285 320 280 300
+          C 278 288 282 278 290 270 Z"
+          fill="rgba(168,73,42,.2)" stroke="var(--sienna)" stroke-width="1.4"/>
+
+        <!-- Malaysia country label -->
+        <text x="350" y="295" font-family="Fraunces, serif" font-style="italic" font-size="22" fill="var(--sienna)" opacity=".75">Malaysia</text>
+
+        <!-- Sarawak marker on NW Borneo -->
+        <circle cx="370" cy="320" r="6" fill="var(--jade)"/>
+        <circle cx="370" cy="320" r="6" fill="none" stroke="var(--jade)" stroke-width="1" opacity=".5">
+          <animate attributeName="r" from="6" to="20" dur="2.4s" repeatCount="indefinite"/>
           <animate attributeName="opacity" from=".7" to="0" dur="2.4s" repeatCount="indefinite"/>
         </circle>
-        <text x="380" y="80" font-family="Be Vietnam Pro, sans-serif" font-size="11" fill="var(--ink)" letter-spacing="1.5">SARAWAK</text>
-        <text x="380" y="68" font-family="Fraunces, serif" font-style="italic" font-size="10" fill="var(--ink)" opacity=".6">Khởi điểm · 1°33′N</text>
+        <text x="382" y="316" font-family="Be Vietnam Pro, sans-serif" font-size="11" fill="var(--ink)" letter-spacing="1.5" font-weight="500">SARAWAK</text>
+        <text x="382" y="331" font-family="Fraunces, serif" font-style="italic" font-size="10" fill="var(--ink)" opacity=".6">Khởi điểm · 1°33′N</text>
 
-        <!-- Connecting flight path -->
-        <path d="M460 135 Q300 60 138 225" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-dasharray="5 5"/>
+        <!-- Flight path Sarawak → HCMC -->
+        <path d="M 370 320 Q 290 240 200 256" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-dasharray="5 5"/>
+
         <!-- Plane icon along path -->
-        <g transform="translate(298,110) rotate(160)">
+        <g transform="translate(285,255) rotate(-150)">
           <path d="M0 -8 L3 -2 L14 -1 L14 1 L3 2 L0 8 L-2 8 L-1 2 L-10 3 L-12 5 L-13 4 L-11 0 L-13 -4 L-12 -5 L-10 -3 L-1 -2 L-2 -8 Z" fill="var(--ink)"/>
         </g>
+
+        <!-- South China Sea label -->
+        <text x="320" y="200" font-family="Fraunces, serif" font-style="italic" font-size="11" fill="var(--ink)" opacity=".35" letter-spacing="3">BIỂN ĐÔNG</text>
       </svg>
       <div class="map-caption">
         <span>Sarawak → TP.HCM</span>
@@ -1386,7 +1555,7 @@
   </div>
   <div class="story-right reveal">
     <p>
-      Malay Yến ra đời từ một câu hỏi đơn giản: tại sao yến — vốn là dưỡng
+      My Yến ra đời từ một câu hỏi đơn giản: tại sao yến — vốn là dưỡng
       chất quý — lại chỉ dành cho những dịp đặc biệt? Câu trả lời nằm ở
       Malaysia, quốc gia đứng thứ hai thế giới về sản lượng yến sào với
       hệ thống nhà nuôi quy hoạch và quy trình kiểm dịch AVS nghiêm ngặt.
@@ -1417,7 +1586,7 @@
 <!-- PRODUCTS -->
 <section class="products" id="products">
   <div class="products-head reveal">
-    <h2 class="display">Bộ sưu tập <em>Malay Yến</em><br>2026.</h2>
+    <h2 class="display">Bộ sưu tập <em>My Yến</em><br>2026.</h2>
     <p>Ba dòng sản phẩm cho từng nhu cầu — từ yến vụn dùng đều đặn hằng
        ngày đến yến rút lông nguyên tổ làm quà biếu trang trọng.</p>
   </div>
@@ -1592,7 +1761,7 @@
   </div>
 
   <div class="combo-grid">
-    <article class="combo-card reveal">
+    <article class="combo-card reveal" data-combo="Combo Khởi đầu — 590.000đ">
       <div class="combo-eyebrow">Gói thử</div>
       <div class="combo-name">Combo <em>Khởi đầu</em></div>
       <div class="combo-tag">Cho người lần đầu dùng yến</div>
@@ -1610,7 +1779,7 @@
       <a href="#order" class="btn-primary">Đặt combo này</a>
     </article>
 
-    <article class="combo-card featured reveal">
+    <article class="combo-card featured reveal" data-combo="Combo Gia đình — 1.490.000đ">
       <div class="combo-badge">Bán chạy</div>
       <div class="combo-eyebrow">Cả tuần dùng đều</div>
       <div class="combo-name">Combo <em>Gia đình</em></div>
@@ -1630,7 +1799,7 @@
       <a href="#order" class="btn-primary">Đặt combo này</a>
     </article>
 
-    <article class="combo-card reveal">
+    <article class="combo-card reveal" data-combo="Combo Sang trọng — 1.890.000đ">
       <div class="combo-eyebrow">Gói biếu tặng</div>
       <div class="combo-name">Combo <em>Sang trọng</em></div>
       <div class="combo-tag">Quà biếu trang trọng dịp lễ Tết</div>
@@ -1741,7 +1910,7 @@
     <thead>
       <tr>
         <th>Tiêu chí</th>
-        <th class="featured">Malay Yến</th>
+        <th class="featured">My Yến</th>
         <th>Yến đảo VN</th>
         <th>Yến trôi nổi</th>
       </tr>
@@ -2054,7 +2223,7 @@
         <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.2 4.6L15 6.3l-3.5 3.4.8 4.8L8 12.2 3.7 14.5l.8-4.8L1 6.3l4.8-.7L8 1z"/></svg>
       </div>
       <blockquote>
-        Trước hay mua yến đảo nhưng chỉ dám chưng dịp Tết. Đổi sang Malay Yến rồi <em>chưng được mỗi tuần</em> — mà chất lượng thì không thua kém gì.
+        Trước hay mua yến đảo nhưng chỉ dám chưng dịp Tết. Đổi sang My Yến rồi <em>chưng được mỗi tuần</em> — mà chất lượng thì không thua kém gì.
       </blockquote>
       <div class="testi-cite">
         <div class="avatar">L</div>
@@ -2133,7 +2302,7 @@
 
     <details class="reveal">
       <summary>
-        Tại sao giá Malay Yến chỉ bằng 1/3 yến đảo?
+        Tại sao giá My Yến chỉ bằng 1/3 yến đảo?
         <span class="faq-toggle">+</span>
       </summary>
       <p>Ba lý do: (1) Malaysia có hơn 60.000 nhà yến quy hoạch, sản lượng lớn hơn 10 lần Việt Nam, giá đầu vào thấp hơn. (2) Chúng tôi nhập trực tiếp từ trang trại, không qua đại lý. (3) Bao bì giản dị, không tốn chi phí thương hiệu cao cấp. Giá thấp không đến từ pha trộn hay giảm chất lượng.</p>
@@ -2179,13 +2348,18 @@
     Giảm <em>40%</em> đơn đầu,<br>tặng kèm 5 hũ chưng sẵn.
   </h2>
   <form class="cta-form reveal" id="leadForm" novalidate>
-    <p>Để lại thông tin — chuyên viên Malay Yến sẽ gửi mã ưu đãi và tư
+    <p>Để lại thông tin — chuyên viên My Yến sẽ gửi mã ưu đãi và tư
        vấn dòng sản phẩm phù hợp với gia đình bạn trong vòng 24 giờ.</p>
-    <div class="input-row">
-      <input type="text" name="name" required minlength="2" placeholder="Họ tên của bạn" />
+    <div class="combo-pill" id="comboPill" hidden>
+      <span>Đang quan tâm:</span>
+      <strong id="comboPillName"></strong>
+      <button type="button" id="comboPillClear" aria-label="Bỏ chọn combo">×</button>
     </div>
     <div class="input-row">
-      <input type="tel" name="phone" required pattern="[0-9 +\-]{9,15}" placeholder="Số điện thoại liên hệ" />
+      <input type="text" name="name" required minlength="2" placeholder="Họ tên của bạn" autocomplete="name" />
+    </div>
+    <div class="input-row">
+      <input type="tel" name="phone" required pattern="[0-9 +\-]{9,15}" placeholder="Số điện thoại liên hệ" autocomplete="tel" />
       <button type="submit">Nhận mã</button>
     </div>
     <div class="form-note">
@@ -2201,7 +2375,7 @@
 <!-- FOOTER -->
 <footer>
   <div>
-    <div class="foot-brand display">Malay <em>Yến</em></div>
+    <div class="foot-brand display">My <em>Yến</em></div>
     <p class="foot-tag">Yến nhập khẩu chính ngạch từ Malaysia, giá thân thiện cho gia đình Việt dùng đều đặn mỗi tuần.</p>
     <div class="foot-social">
       <a href="#" aria-label="Facebook">
@@ -2249,13 +2423,13 @@
     <h5>Liên hệ</h5>
     <ul>
       <li><a href="https://zalo.me/0909888777" target="_blank" rel="noopener">Zalo: 0909 888 777</a></li>
-      <li><a href="mailto:hello@malayyen.vn">hello@malayyen.vn</a></li>
+      <li><a href="mailto:hello@myyen.vn">hello@myyen.vn</a></li>
       <li><a href="#">99 Lê Lợi, Q.1, TP.HCM</a></li>
       <li><a href="#">8h–21h · cả tuần</a></li>
     </ul>
   </div>
   <div class="foot-bottom">
-    <span>© 2026 Malay Yến. Bảo lưu mọi quyền.</span>
+    <span>© 2026 My Yến. Bảo lưu mọi quyền.</span>
     <span>Nhập khẩu chính ngạch từ Sarawak ✣</span>
   </div>
 </footer>
@@ -2302,6 +2476,28 @@
     });
   });
 
+  // Combo pre-select → fill the order form pill
+  let selectedCombo = '';
+  const comboPill = document.getElementById('comboPill');
+  const comboPillName = document.getElementById('comboPillName');
+  const comboPillClear = document.getElementById('comboPillClear');
+  document.querySelectorAll('.combo-card .btn-primary').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+      const card = btn.closest('.combo-card');
+      if(card && card.dataset.combo){
+        selectedCombo = card.dataset.combo;
+        comboPillName.textContent = selectedCombo;
+        comboPill.hidden = false;
+      }
+    });
+  });
+  if(comboPillClear){
+    comboPillClear.addEventListener('click', ()=>{
+      selectedCombo = '';
+      comboPill.hidden = true;
+    });
+  }
+
   // Form handling — graceful client-side feedback
   const form = document.getElementById('leadForm');
   const statusEl = document.getElementById('formStatus');
@@ -2323,8 +2519,38 @@
         return;
       }
       statusEl.style.color = 'var(--jade)';
-      statusEl.textContent = 'Cảm ơn ' + name + '! Chuyên viên sẽ gọi bạn trong 24 giờ.';
+      const suffix = selectedCombo ? ' Mã ưu đãi cho "' + selectedCombo + '" đã được ghi nhận.' : '';
+      statusEl.textContent = 'Cảm ơn ' + name + '! Chuyên viên sẽ gọi bạn trong 24 giờ.' + suffix;
       form.reset();
+      selectedCombo = '';
+      comboPill.hidden = true;
+    });
+  }
+
+  // Hide scroll cue once user starts scrolling
+  let scrolled = false;
+  window.addEventListener('scroll', ()=>{
+    if(!scrolled && window.scrollY > 80){
+      document.body.classList.add('scrolled');
+      scrolled = true;
+    }
+  }, {passive:true});
+
+  // Mobile menu toggle
+  const burger = document.getElementById('navBurger');
+  const mm = document.getElementById('mobileMenu');
+  const setMenu = (open)=>{
+    mm.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    mm.setAttribute('aria-hidden', open ? 'false' : 'true');
+    burger.setAttribute('aria-label', open ? 'Đóng menu' : 'Mở menu');
+  };
+  if(burger){
+    burger.addEventListener('click', ()=>setMenu(!mm.classList.contains('open')));
+    mm.querySelectorAll('[data-mm]').forEach(a=>a.addEventListener('click', ()=>setMenu(false)));
+    document.addEventListener('keydown', e=>{
+      if(e.key==='Escape' && mm.classList.contains('open')) setMenu(false);
     });
   }
 
